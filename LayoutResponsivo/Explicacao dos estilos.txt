@@ -1,0 +1,15 @@
+Explicação dos estilos utilizados em cada componente:
+
+-container: flex: 1, para ocupar toda a tela disponível
+-header: Cabeçalho com flex: 0.3, para ocupar uma pequena parte da tela, com fundo preto.
+-main: Conteudo principal, com flex: 3, para ocupar uma boa parte da tela, com fundo branco,justifyContent: 'center', alignItems: 'center', para centralizar tanto na vertical quanto na horizontal.
+-footer: Rodapé, semelhante ao header, com flex: 0.3 e fundo preto.
+-card: Cartão centralizado, largura de 90% da tela, altura de 50%, fundo na cor: '#f0f0f0', bordas arredondadas, elevation: 5, para dar uma impressão de camada e centralização dos itens.
+-profileContainer: Organiza os elementos do perfil em coluna (um item acima do outro) e centraliza horizontalmente.
+-avatar: Define o tamanho da imagem do perfil (100x100), borda arredondada (círculo), borda preta de 3px.
+-info: Centraliza as informações do perfil verticalmente e horizontalmente.
+-name: Estiliza o nome do usuário com fonte grande (24) e negrito.
+-description: Texto descritivo, fonte média (16), centralizado e com espaçamento superior.
+-buttonContainer: Organiza os botões em linha (um item ao lado do outro), espaçamento com largura de 70% do cartão e margem superior.
+-button: Botão azul, texto branco, padding vertical e horizontal, bordas arredondadas.
+-button2: Segundo botão, cor de fundo diferente (#4d4b4bff), mas com o mesmo estilo de padding, cor do texto e borda arredondada.
