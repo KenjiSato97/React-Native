@@ -7,6 +7,12 @@ const LoginScreen = () => {
 
   const [email, setEmail] = useState("")
   const [senha, setSenha] = useState("")
+  const handleGithubPress = () => {
+    alert('Logando pelo Github');
+  };
+  const handleGooglePress = () => {
+    alert('Logando pelo Google');
+  };
 
   return (
     <View style={styles.container}>
@@ -28,10 +34,13 @@ const LoginScreen = () => {
       />
 
       <Button title="Entrar" />
-      <TouchableOpacity style={[styles.socialButtons, {backgroundColor: '#DB4437'}]}>
+
+      <Text style={styles.orText}>Ou entre com</Text>
+      
+      <TouchableOpacity onPress={handleGooglePress} style={[styles.socialButtons, {backgroundColor: '#DB4437'}]}>
         <Text style={styles.socialText}>Entrar com Google</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={[styles.socialButtons, {backgroundColor: '#333'}]}>
+      <TouchableOpacity onPress={handleGithubPress} style={[styles.socialButtons, {backgroundColor: '#333'}]}>
         <Text style={styles.socialText}>Entrar com Github</Text>
       </TouchableOpacity>
     </View>
@@ -39,10 +48,10 @@ const LoginScreen = () => {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1,  justifyContent: 'center', alignItems: 'center', padding: 20  },
-  title: { fontSize: 24, fontWeight: 'bold', marginBottom: 20 },
+  container: { flex: 1,  justifyContent: 'center', alignItems: 'center', padding: 20},
+  title: { fontSize: 24, fontWeight: 'bold', marginBottom: 20},
   input: { width: '100%', borderBottomWidth: 1, marginBottom: 20, padding: 8},
-  orText: { marginVertical: 20, fontSize: 16, color: '#555' },
+  orText: { marginVertical: 20, fontSize: 16, color: '#555'},
   socialButtons: {
     flexDirection: 'row',
     alignItems: 'center',
