@@ -1,10 +1,14 @@
 import { View, Text, StyleSheet, TextInput, Button, TouchableOpacity, Image } from 'react-native'
 import { useState } from 'react'
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
 
   const [email, setEmail] = useState("")
   const [senha, setSenha] = useState("")
+
+  const goToHomeScreen = () => {
+    navigation.navigate('Home')
+  }
   const handleGithubPress = () => {
     alert('Logando pelo Github');
   };
@@ -37,7 +41,7 @@ const LoginScreen = () => {
         onChangeText={setSenha}
       />
 
-      <Button title="Entrar" />
+      <Button title="Entrar" onPress={goToHomeScreen} />
 
       <View style={styles.linksRow}>
         <Text>Esqueceu sua senha?</Text>
